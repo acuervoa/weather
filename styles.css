@@ -1,0 +1,19 @@
+body {
+	background: #000000 url(http://dummyimage.com/1000x1000) no-repeat;
+	text-align: center; 
+	color: white;
+	margin:auto;
+}
+
+
+ul {
+	text-decoration: none;
+}
+
+#fahrenheit {
+	visibility: hidden;
+}
+
+
+
+  
