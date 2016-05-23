@@ -31,13 +31,13 @@ $(document).ready(function(){
 					$('#pressure').html(json.main.pressure);
 					$('#wind').html(json.wind.speed);
 					$(".image").attr("src","http://openweathermap.org/img/w/" + json.weather[0].icon +".png");
-					changeBackgroundImage(json.weather[0].description);
+					//changeBackgroundImage(json.weather[0].description);
 				}	
 			});
 	
 	};
 
-	var changeBackgroundImage = function(weather) {
+	/*var changeBackgroundImage = function(weather) {
 		  var flickerAPI = "http://api.flickr.com/services/flickr.photos.search";
   			$.getJSON( flickerAPI, {
   				api_key: "9e9aefe2303bbcce7953c3fa1f4b2c68",
@@ -61,12 +61,12 @@ $(document).ready(function(){
         		});
       		});
     	
-	};
+	};*/
 
-	//getIPInfo();
+	getIPInfo();
 
 	//console.log(getIPInfo());
-	changeBackgroundImage('calm');
+	//changeBackgroundImage('calm');
 });
 
 
