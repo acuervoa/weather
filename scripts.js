@@ -2,6 +2,7 @@ $(document).ready(function(){
 	
 	var getIPInfo = function(){
 		var ipInfoAPI = "http://ipinfo.io/json";
+
 		$.getJSON(ipInfoAPI + "?callback=?", function(json){
 			apiWeatherURL(json.city);	
 		});
@@ -12,7 +13,6 @@ $(document).ready(function(){
 		var APIKEY = "bb98943838568d5a03db08a7fc567d68";
 			var units = "metric";
 			var language = "es";
-			//var city = json.city;
 
 			var apiWeatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + 	city 
 								+ "&units=" + units 
@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$.ajax({
 				url: apiWeatherURL,
 				success: function(json){
-					
+					console.log(json);
 					$('#city').html(json.name + ", " + json.sys.country);
 					$('#weather').html(json.weather[0].description);
 					$('#temperature').html(json.main.temp);
